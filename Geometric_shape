@@ -1,0 +1,20 @@
+import turtle
+
+def draw_shape(sides, length):
+    angle = 360 / sides
+    for _ in range(sides):
+        turtle.forward(length)
+        turtle.right(angle)
+
+# Set up the turtle screen
+turtle.speed(2)
+
+# Get user input for the shape
+sides = int(input("Enter the number of sides: "))
+length = int(input("Enter the length of each side: "))
+
+# Draw the shape
+draw_shape(sides, length)
+
+# Close the turtle graphics window on click
+turtle.exitonclick()
